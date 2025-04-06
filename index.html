@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Driven Handwritten Text Enhancement</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .handwritten-input {
+            font-family: 'Dancing Script', cursive;
+            min-height: 200px;
+        }
+        .header-bg {
+            background-image: url('https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <header class="header-bg bg-blue-800 text-white py-16 px-4 text-center relative">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-10">
+            <h1 class="text-4xl font-bold mb-2">AI-Driven Handwritten Text Enhancement</h1>
+            <p class="text-xl">Write freely, we'll perfect it!</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8 max-w-4xl">
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <h2 class="text-2xl font-semibold mb-4">Your Handwritten Text</h2>
+            <textarea id="inputText" class="handwritten-input w-full p-4 border border-gray-300 rounded-lg mb-4 text-2xl" placeholder="Write your text here..."></textarea>
+            <button id="enhanceBtn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-200 flex items-center justify-center">
+                <i class="fas fa-magic mr-2"></i> Enhance Text
+            </button>
+        </div>
+
+        <div id="outputSection" class="bg-white rounded-lg shadow-lg p-6 hidden">
+            <h2 class="text-2xl font-semibold mb-4">Enhanced Text</h2>
+            <div id="outputText" class="p-4 border border-gray-300 rounded-lg mb-4 min-h-20 bg-gray-50"></div>
+            <button id="copyBtn" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition duration-200">
+                <i class="fas fa-copy mr-2"></i> Copy to Clipboard
+            </button>
+        </div>
+
+        <div id="errorSection" class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-6 hidden" role="alert">
+            <p id="errorMessage"></p>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6 px-4 text-center">
+        <p>Powered by Gemini API | Background by Pexels</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
